@@ -1,0 +1,22 @@
+{
+    "project_name": "Django Example Panel",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+    "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+    "project_description": "A Django Admin panel for inspecting and managing X",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "github_username": "yourusername",
+    "version": "0.1.0",
+    "django_app_verbose_name": "{{ cookiecutter.project_name }}",
+    "open_source_license": [
+        "MIT",
+        "BSD",
+        "Apache-2.0",
+        "GPL-3.0",
+        "No license file"
+    ],
+    "_copy_without_render": [
+        ".github/*",
+        ".github/workflows/*"
+    ]
+}
