@@ -1,0 +1,33 @@
+{% raw %}{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_list %}
+
+{% block title %}{{ title }} | {% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<style type="text/css">
+    {% include "{% endraw %}admin/{{ cookiecutter.package_name }}/styles.css{% raw %}" %}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url '{% endraw %}{{ cookiecutter.package_name }}{% raw %}:index' %}">{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}</a></h1>
+{% endblock %}
+
+{% block nav-sidebar %}
+{# Hide sidebar - we don't want to show all apps #}
+{% endblock %}
+
+{% block messages %}
+{% endblock %}
+
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; {% trans '{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}' %}
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}{% endraw %}
