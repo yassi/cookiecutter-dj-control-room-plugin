@@ -14,8 +14,6 @@ services:
     working_dir: /app/example_project
     tty: true
     stdin_open: true
-    depends_on:
-      - redis
     command: "/bin/bash"
 
   postgres:
