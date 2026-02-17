@@ -69,7 +69,10 @@ include-package-data = true
 exclude = ["tests*", "example_project*"]
 
 [tool.setuptools.package-data]
-"{{ cookiecutter.package_name }}" = ["templates/**/*"]
+"{{ cookiecutter.package_name }}" = [
+    "templates/**/*",
+    "static/**/*"
+]
 
 # pytest configuration
 [tool.pytest.ini_options]

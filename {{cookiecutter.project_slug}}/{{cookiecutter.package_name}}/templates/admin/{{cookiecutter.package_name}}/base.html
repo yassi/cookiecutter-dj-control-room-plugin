@@ -5,9 +5,7 @@
 
 {% block extrahead %}
 {{ block.super }}
-<style type="text/css">
-    {% include "{% endraw %}admin/{{ cookiecutter.package_name }}/styles.css{% raw %}" %}
-</style>
+<link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.package_name }}/css/styles.css{% raw %}' %}">
 {% endblock %}
 
 {% block branding %}
