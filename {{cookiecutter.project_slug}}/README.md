@@ -125,6 +125,45 @@ python manage.py createsuperuser  # If you don't have an admin user
 3. Look for the "{{ cookiecutter.django_app_verbose_name.upper() }}" section in the admin interface
 
 
+## DJ Control Room Integration
+
+This panel is designed to work seamlessly with [DJ Control Room](https://github.com/yassi/dj-control-room), a centralized dashboard for managing Django admin panels.
+
+### Integration
+
+register your panel in django's installed apps
+
+1. Add `dj_control_room` to `INSTALLED_APPS`:
+   ```python
+   INSTALLED_APPS = [
+       # ... other apps
+       'dj_control_room',
+       '{{ cookiecutter.package_name }}',
+   ]
+   ```
+
+2. Include the Control Room URLs in your `urls.py`:
+   ```python
+   urlpatterns = [
+       path('', include('{{ cookiecutter.package_name }}.urls')),  # Panel URLs
+       path('admin/dj-control-room/', include('dj_control_room.urls')),  # Control Room
+       path('admin/', admin.site.urls),
+   ]
+   ```
+
+3. Visit `/admin/dj-control-room/` to see all your panels in one place!
+
+### Panel Configuration
+
+The panel is configured via the `panel.py` file with the following attributes:
+
+- **ID**: `{{ cookiecutter.package_name }}`
+- **Name**: {{ cookiecutter.project_name }}
+- **Description**: {{ cookiecutter.project_description }}
+- **Icon**: {{ cookiecutter.panel_icon }}
+
+You can customize these values by editing `{{ cookiecutter.package_name }}/panel.py`.
+
 
 ## License
 

@@ -38,6 +38,9 @@ dependencies = [
     "Django>=4.2",
 ]
 
+[project.entry-points."dj_control_room.panels"]
+{{ cookiecutter.package_name }} = "{{ cookiecutter.package_name }}.panel:{{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_', '') }}Panel"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",

@@ -8,6 +8,14 @@
     "github_username": "yourusername",
     "version": "0.1.0",
     "django_app_verbose_name": "{{ cookiecutter.project_name }}",
+    "panel_icon": [
+        "database",
+        "layers",
+        "link",
+        "chart",
+        "radio",
+        "cog"
+    ],
     "open_source_license": [
         "MIT",
         "BSD",
