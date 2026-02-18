@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Post-generation hook for cookiecutter-django-admin-panel.
+Post-generation hook for cookiecutter-dj-control-room-plugin.
 
 This script runs after the project is generated to perform cleanup tasks.
 """

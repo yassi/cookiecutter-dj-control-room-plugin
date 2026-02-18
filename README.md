@@ -1,4 +1,4 @@
-# cookiecutter-django-admin-panel
+# cookiecutter-dj-control-room-plugin
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for generating Django admin panel libraries like `dj-redis-panel`, `dj-cache-panel`, and `dj-celery-panel`.
 
@@ -49,7 +49,7 @@ pip install cookiecutter
 
 Create a new project by referencing this template directly from github
 ```bash
-cookiecutter https://github.com/yassi/cookiecutter-django-admin-panel
+cookiecutter https://github.com/yassi/cookiecutter-dj-control-room-plugin
 ```
 
 ### Template Variables
@@ -70,7 +70,7 @@ You'll be prompted to enter the following information:
 ### Example
 
 ```bash
-$ cookiecutter cookiecutter-django-admin-panel
+$ cookiecutter cookiecutter-dj-control-room-plugin
 
 project_name [Django Example Panel]: Django Redis Panel
 project_slug [django-redis-panel]: 
