@@ -1,5 +1,10 @@
 # cookiecutter-dj-control-room-plugin
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yassi/cookiecutter-dj-control-room-plugin/main/images/hero-dark.png">
+  <img src="https://raw.githubusercontent.com/yassi/cookiecutter-dj-control-room-plugin/main/images/hero-light.png" alt="cookiecutter-dj-control-room-plugin">
+</picture>
+
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for generating Django admin panel libraries like `dj-redis-panel`, `dj-cache-panel`, and `dj-celery-panel`.
 
 Libraries generated from this template are **compatible with [dj-control-room](https://github.com/yassi/dj-control-room)** and can be registered as panels in its centralized dashboard.
