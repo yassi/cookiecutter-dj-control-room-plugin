@@ -2,7 +2,12 @@
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for generating Django admin panel libraries like `dj-redis-panel`, `dj-cache-panel`, and `dj-celery-panel`.
 
-This template provides a complete, production-ready structure for building Django libraries that integrate seamlessly with the Django admin interface.
+Libraries generated from this template are **compatible with [dj-control-room](https://github.com/yassi/dj-control-room)** and can be registered as panels in its centralized dashboard.
+
+- **Official site:** [djangocontrolroom.com](https://djangocontrolroom.com)
+- **Project repo:** [dj-control-room](https://github.com/yassi/dj-control-room)
+
+This template provides a complete, production-ready structure for building Django libraries that integrate seamlessly with the Django admin interface. 
 
 ## Features
 
