@@ -1,3 +1,44 @@
+/* ===== WELCOME PAGE STYLES ===== */
+
+.panel-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.panel-welcome-icon {
+    margin-bottom: 24px;
+}
+
+.panel-welcome-title {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+    color: var(--body-fg, #333);
+}
+
+.panel-welcome-subtitle {
+    font-size: 14px;
+    color: var(--body-quiet-color, #666);
+    margin: 0 0 28px 0;
+}
+
+.panel-welcome-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.panel-welcome-links li a {
+    font-size: 14px;
+}
+
 /* ===== KEY SEARCH PAGE STYLES ===== */
 
 .key-search-page-header {
