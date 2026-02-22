@@ -19,6 +19,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("admin/{{ cookiecutter.project_slug }}/", include("{{ cookiecutter.package_name }}.urls")),
+    path(
+        "admin/{{ cookiecutter.project_slug }}/",
+        include("{{ cookiecutter.package_name }}.urls"),
+    ),
+    path("admin/dj-control-room/", include("dj_control_room.urls")),
     path("admin/", admin.site.urls),
 ]

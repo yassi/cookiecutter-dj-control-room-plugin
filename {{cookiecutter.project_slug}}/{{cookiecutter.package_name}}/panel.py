@@ -14,9 +14,6 @@ class {{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_'
     defined in pyproject.toml under [project.entry-points."dj_control_room.panels"]
     """
     
-    # Unique identifier for this panel (should match the URL namespace in urls.py)
-    id = "{{ cookiecutter.package_name }}"
-
     # Display name shown in the DJ Control Room dashboard
     name = "{{ cookiecutter.project_name }}"
 
@@ -26,13 +23,8 @@ class {{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_'
     # Icon to display (options: database, layers, link, chart, radio, cog, etc.)
     icon = "{{ cookiecutter.panel_icon }}"
 
-    # PyPI package name (e.g. "dj-example-panel").
-    # Enables the install/configure page and provides the pip install snippet.
-    package = "{{ cookiecutter.project_slug }}"
-
-    # Django app label as it appears in INSTALLED_APPS (e.g. "dj_example_panel").
-    # Used by DJ Control Room to accurately detect whether the app has been
-    # added to INSTALLED_APPS as part of the configured status check.
+    # Django app label as it appears in INSTALLED_APPS and the URL namespace
+    # in urls.py. Defaults to the normalized dist name if not set.
     app_name = "{{ cookiecutter.package_name }}"
 
     # Optional links shown on the install/configure page.

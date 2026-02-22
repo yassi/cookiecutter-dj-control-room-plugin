@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "{{ cookiecutter.package_name }}",
+    "dj_control_room",
     "example_project",  # For management commands
 ]
 
