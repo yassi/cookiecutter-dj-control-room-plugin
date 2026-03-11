@@ -5,7 +5,8 @@
 
 {% block extrahead %}
 {{ block.super }}
-<link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.package_name }}/css/styles.css{% raw %}' %}">
+{% if dj_cr_load_default_css %}<link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.package_name }}/css/styles.css{% raw %}' %}">{% endif %}
+{{ dj_cr_extra_css }}
 {% endblock %}
 
 {% block branding %}

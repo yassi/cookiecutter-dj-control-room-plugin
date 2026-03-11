@@ -26,6 +26,32 @@ urlpatterns = [
 - All views require authentication via `@staff_member_required`
 - No additional security configuration needed
 
+## CSS Customization
+
+You can customize panel styling with `{{ cookiecutter.package_name|upper }}_SETTINGS`:
+
+### `LOAD_DEFAULT_CSS`
+
+**Type:** `bool`  
+**Default:** `True`  
+**Description:** Whether to load the built-in panel stylesheet. Set to `False` to use your own styles.
+
+### `EXTRA_CSS`
+
+**Type:** `list[str]`  
+**Default:** `[]`  
+**Description:** Additional stylesheets to load after the default CSS. Accepts static file paths or full URLs.
+
+```python
+{{ cookiecutter.package_name|upper }}_SETTINGS = {
+    'LOAD_DEFAULT_CSS': True,
+    'EXTRA_CSS': [
+        '{{ cookiecutter.package_name }}/css/overrides.css',
+        'https://cdn.example.com/theme.css',
+    ],
+}
+```
+
 ## Advanced Configuration
 
-Advanced configuration options will be added in future releases.
+Other advanced configuration options may be added in future releases.
