@@ -3,11 +3,11 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 
-from .models import CeleryPanelPlaceholder
+from .models import PanelPlaceholder
 
 
-@admin.register(CeleryPanelPlaceholder)
-class CeleryPanelPlaceholderAdmin(admin.ModelAdmin):
+@admin.register(PanelPlaceholder)
+class PanelPlaceholderAdmin(admin.ModelAdmin):
     def changelist_view(self, request, extra_context=None):
         # The @staff_member_required decorator on the view will handle auth
         return HttpResponseRedirect(reverse("{{ cookiecutter.package_name }}:index"))

@@ -9,7 +9,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class CeleryPanelTestCase(TestCase):
+class PanelTestCase(TestCase):
     """
     Base test case for {{ cookiecutter.project_name }} tests.
     Sets up authenticated admin user for testing.
