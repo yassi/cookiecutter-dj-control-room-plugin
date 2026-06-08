@@ -36,6 +36,7 @@ classifiers = [
 keywords = ["django", "admin", "panel"]
 dependencies = [
     "Django>=4.2",
+    "dj-control-room-base>=1.0.0",
 ]
 
 [project.entry-points."dj_control_room.panels"]

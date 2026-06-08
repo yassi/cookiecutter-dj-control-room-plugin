@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "dj_control_room_base",
     "{{ cookiecutter.package_name }}",
     "dj_control_room",
     "example_project",  # For management commands

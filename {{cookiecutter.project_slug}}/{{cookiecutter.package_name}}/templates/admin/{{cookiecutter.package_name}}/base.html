@@ -1,28 +1,20 @@
-{% raw %}{% extends "admin/base_site.html" %}
-{% load i18n admin_urls static admin_list %}
+{% raw %}{% extends "dj_control_room_base/panel_base.html" %}
+{% load i18n static %}
 
-{% block title %}{{ title }} | {% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}{% endblock %}
+{% block panel_title %}{{ title|default:"{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}" }}{% endblock %}
 
-{% block extrahead %}
-{{ block.super }}
-{% if dj_cr_load_default_css %}<link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.package_name }}/css/styles.css{% raw %}' %}">{% endif %}
-{{ dj_cr_extra_css }}
-{% endblock %}
-
-{% block branding %}
+{% block panel_branding %}
 <h1 id="site-name"><a href="{% url '{% endraw %}{{ cookiecutter.package_name }}{% raw %}:index' %}">{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}</a></h1>
 {% endblock %}
 
-{% block messages %}
+{% block panel_breadcrumbs %}
+&rsaquo; {% trans "{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}" %}
 {% endblock %}
 
-
-{% block breadcrumbs %}
-<div class="breadcrumbs">
-<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
-&rsaquo; {% trans '{% endraw %}{{ cookiecutter.django_app_verbose_name }}{% raw %}' %}
-</div>
+{% block panel_scripts %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static '{% endraw %}{{ cookiecutter.package_name }}{% raw %}/css/styles.css' %}">
 {% endblock %}
 
-{% block content %}
+{% block panel_content %}
 {% endblock %}{% endraw %}

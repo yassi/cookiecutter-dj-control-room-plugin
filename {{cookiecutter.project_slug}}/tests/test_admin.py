@@ -28,14 +28,14 @@ class TestAdminIntegration(PanelTestCase):
 
         # Check that the link to the changelist exists
         changelist_url = reverse(
-            "admin:{{ cookiecutter.package_name }}_panelplaceholder_changelist"
+            "admin:{{ cookiecutter.package_name }}_{{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_', '') | lower }}placeholder_changelist"
         )
         self.assertContains(response, changelist_url)
 
     def test_control_room_panel_changelist_redirects_to_index(self):
         """Test that clicking the Panel in admin redirects to the Panel index."""
         changelist_url = reverse(
-            "admin:{{ cookiecutter.package_name }}_panelplaceholder_changelist"
+            "admin:{{ cookiecutter.package_name }}_{{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_', '') | lower }}placeholder_changelist"
         )
         response = self.client.get(changelist_url)
 
@@ -48,7 +48,7 @@ class TestAdminIntegration(PanelTestCase):
         """Test that unauthenticated users cannot access the Panel through admin."""
         client = Client()
         changelist_url = reverse(
-            "admin:{{ cookiecutter.package_name }}_panelplaceholder_changelist"
+            "admin:{{ cookiecutter.package_name }}_{{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_', '') | lower }}placeholder_changelist"
         )
         response = client.get(changelist_url)
 
@@ -67,7 +67,7 @@ class TestAdminIntegration(PanelTestCase):
         client.force_login(user)
 
         changelist_url = reverse(
-            "admin:{{ cookiecutter.package_name }}_panelplaceholder_changelist"
+            "admin:{{ cookiecutter.package_name }}_{{ cookiecutter.project_name.replace(' ', '').replace('-', '').replace('_', '') | lower }}placeholder_changelist"
         )
         response = client.get(changelist_url)
 

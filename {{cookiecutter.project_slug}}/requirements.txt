@@ -1,5 +1,6 @@
 # core dependencies
-Django>=6.0
+Django>=4.2
+dj-control-room-base>=1.0.0
 dj-control-room>=1.1.1
 #redis>=4.0
 #pymemcache>=4.0.0
