@@ -23,6 +23,7 @@ urlpatterns = [
         "admin/{{ cookiecutter.project_slug }}/",
         include("{{ cookiecutter.package_name }}.urls"),
     ),
+    path("admin/dj-control-room-base/", include("dj_control_room_base.urls")),
     path("admin/dj-control-room/", include("dj_control_room.urls")),
     path("admin/", admin.site.urls),
 ]
