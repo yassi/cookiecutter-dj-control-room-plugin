@@ -52,6 +52,30 @@ You can customize panel styling with `{{ cookiecutter.package_name|upper }}_SETT
 }
 ```
 
+## Panel Tools
+
+{{ cookiecutter.project_name }} ships with `{{ cookiecutter.package_name }}/tools.py`, a `ToolRegistry` of MCP-facing tools that the dj-control-room hub can aggregate and expose to an AI agent. A `get_resolved_settings` tool is included by default.
+
+Add your own by decorating a handler with `@registry.register(...)` in `tools.py`:
+
+```python
+# {{ cookiecutter.package_name }}/tools.py
+@registry.register(
+    name="get_item",
+    scope="read",
+    description="Fetch a single item by key.",
+    input_schema={
+        "type": "object",
+        "properties": {"key": {"type": "string"}},
+        "required": ["key"],
+    },
+)
+def handle_get_item(ctx: PanelToolContext) -> PanelToolResult:
+    ...
+```
+
+Tools are picked up automatically via `conf.py`'s `tools=tool_registry.tools`. See the [dj-control-room-base panel tools guide](https://yassi.github.io/dj-control-room-base/building-panels/#panel-tools) for the full API.
+
 ## Advanced Configuration
 
 Other advanced configuration options may be added in future releases.

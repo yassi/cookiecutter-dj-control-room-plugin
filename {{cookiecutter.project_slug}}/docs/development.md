@@ -90,10 +90,12 @@ pytest --cov={{ cookiecutter.package_name }} tests/
 │   ├── urls.py               # URL patterns
 │   ├── models.py             # Placeholder model
 │   ├── admin.py              # Admin integration
+│   ├── tools.py              # MCP-facing panel tools
 │   └── templates/            # HTML templates
 ├── tests/                    # Test suite
 │   ├── base.py               # Test base class
 │   ├── test_admin.py         # Admin integration tests
+│   ├── test_tools.py         # Panel tool tests
 │   └── conftest.py           # Pytest configuration
 ├── example_project/          # Example Django project
 ├── docs/                     # Documentation
