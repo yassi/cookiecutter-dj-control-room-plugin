@@ -1,0 +1,7 @@
+# Dependencies for testing the cookiecutter-dj-control-room-plugin template
+# itself (baking projects and running their generated test suites).
+#
+# These are separate from the generated project's own requirements.txt.
+cookiecutter>=2.6.0
+pytest>=7.4.0
+pytest-cookies>=0.7.0

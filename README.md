@@ -249,7 +249,34 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### Testing Your Changes
 
-Before submitting a PR, test the template:
+This repo has its own automated test suite (in `tests/`, separate from the
+tests that get generated *inside* a project) that bakes the template with
+[`cookiecutter`](https://github.com/cookiecutter/cookiecutter) and
+[`pytest-cookies`](https://github.com/hackebrot/pytest-cookies), then
+installs the generated project into an isolated virtualenv exactly like a
+real consumer would (`pip install -r requirements.txt && pip install -e .`)
+and runs **its** generated test suite. This is what catches bugs where
+rendered code doesn't actually agree with itself -- e.g. a helper renamed in
+`tools.py` without updating the test that imports it.
+
+Run it with:
+
+```bash
+make test          # bakes several project variants and runs their test suites
+make test_fast      # skips the slow bake+install+run checks
+```
+
+or directly:
+
+```bash
+pip install -r requirements-test.txt
+pytest tests/ -v
+```
+
+This also runs automatically in CI (`.github/workflows/test.yml`) across
+several Python versions.
+
+Before submitting a PR, additionally sanity-check the template by hand:
 
 1. **Generate a project**:
    ```bash
