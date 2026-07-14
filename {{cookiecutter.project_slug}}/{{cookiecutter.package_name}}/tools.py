@@ -33,7 +33,7 @@ registry = ToolRegistry()
         "additionalProperties": False,
     },
 )
-def handle_get_resolved_settings(ctx: PanelToolContext) -> PanelToolResult:
+def handle_hello_world(ctx: PanelToolContext) -> PanelToolResult:
     """Return a simple 'Hello, World!' message."""
     return PanelToolResult(
         success=True,
