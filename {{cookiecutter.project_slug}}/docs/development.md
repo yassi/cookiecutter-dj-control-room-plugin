@@ -95,6 +95,7 @@ pytest --cov={{ cookiecutter.package_name }} tests/
 ├── tests/                    # Test suite
 │   ├── base.py               # Test base class
 │   ├── test_admin.py         # Admin integration tests
+│   ├── test_panel.py         # PanelPlugin declaration tests
 │   ├── test_tools.py         # Panel tool tests
 │   └── conftest.py           # Pytest configuration
 ├── example_project/          # Example Django project
