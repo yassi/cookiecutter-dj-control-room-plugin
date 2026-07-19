@@ -1,16 +1,16 @@
 # cookiecutter-dj-control-room-plugin
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yassi/cookiecutter-dj-control-room-plugin/main/images/hero-dark.png">
-  <img src="https://raw.githubusercontent.com/yassi/cookiecutter-dj-control-room-plugin/main/images/hero-light.png" alt="cookiecutter-dj-control-room-plugin">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/django-control-room/cookiecutter-dj-control-room-plugin/main/images/hero-dark.png">
+  <img src="https://raw.githubusercontent.com/django-control-room/cookiecutter-dj-control-room-plugin/main/images/hero-light.png" alt="cookiecutter-dj-control-room-plugin">
 </picture>
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for generating Django admin panel libraries like `dj-redis-panel`, `dj-cache-panel`, and `dj-celery-panel`.
 
-Libraries generated from this template are **compatible with [dj-control-room](https://github.com/yassi/dj-control-room)** and can be registered as panels in its centralized dashboard.
+Libraries generated from this template are **compatible with [dj-control-room](https://github.com/django-control-room/dj-control-room)** and can be registered as panels in its centralized dashboard.
 
 - **Official site:** [djangocontrolroom.com](https://djangocontrolroom.com)
-- **Project repo:** [dj-control-room](https://github.com/yassi/dj-control-room)
+- **Project repo:** [dj-control-room](https://github.com/django-control-room/dj-control-room)
 
 This template provides a complete, production-ready structure for building Django libraries that integrate seamlessly with the Django admin interface. 
 
@@ -59,7 +59,7 @@ pip install cookiecutter
 
 Create a new project by referencing this template directly from github
 ```bash
-cookiecutter https://github.com/yassi/cookiecutter-dj-control-room-plugin
+cookiecutter https://github.com/django-control-room/cookiecutter-dj-control-room-plugin
 ```
 
 ### Template Variables
@@ -231,9 +231,9 @@ can be used as a starting point for creating any type of django app/library.
 
 ## Examples of Projects Using This Pattern
 
-- [dj-redis-panel](https://github.com/yassi/dj-redis-panel) - Redis inspection and management
-- [dj-cache-panel](https://github.com/yassi/dj-cache-panel) - Django cache backends inspector
-- [dj-celery-panel](https://github.com/yassi/dj-celery-panel) - Celery task monitoring
+- [dj-redis-panel](https://github.com/django-control-room/dj-redis-panel) - Redis inspection and management
+- [dj-cache-panel](https://github.com/django-control-room/dj-cache-panel) - Django cache backends inspector
+- [dj-celery-panel](https://github.com/django-control-room/dj-celery-panel) - Celery task monitoring
 
 ## Template Development
 

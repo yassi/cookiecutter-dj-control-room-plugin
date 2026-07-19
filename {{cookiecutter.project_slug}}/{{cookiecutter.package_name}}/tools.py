@@ -11,7 +11,7 @@ Use local imports inside handlers for anything that touches Django models -
 this keeps this module safe to import at any point in the Django startup
 sequence.
 
-See: https://yassi.github.io/dj-control-room-base/building-panels/#panel-tools
+See: https://django-control-room.github.io/dj-control-room-base/building-panels/#panel-tools
 """
 
 from dj_control_room_base.core.panel_tool import (

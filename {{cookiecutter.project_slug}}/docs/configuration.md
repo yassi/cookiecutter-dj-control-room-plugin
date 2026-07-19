@@ -74,7 +74,7 @@ def handle_get_item(ctx: PanelToolContext) -> PanelToolResult:
     ...
 ```
 
-Tools are picked up automatically via `conf.py`'s `tools=tool_registry.tools`. See the [dj-control-room-base panel tools guide](https://yassi.github.io/dj-control-room-base/building-panels/#panel-tools) for the full API.
+Tools are picked up automatically via `conf.py`'s `tools=tool_registry.tools`. See the [dj-control-room-base panel tools guide](https://django-control-room.github.io/dj-control-room-base/building-panels/#panel-tools) for the full API.
 
 ## Advanced Configuration
 

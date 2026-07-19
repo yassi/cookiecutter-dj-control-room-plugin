@@ -1,4 +1,4 @@
-[![Django Control Room Panel](https://img.shields.io/badge/Django%20Control%20Room-Panel-0c4b33?logo=django)](https://github.com/yassi/dj-control-room)
+[![Django Control Room Panel](https://img.shields.io/badge/Django%20Control%20Room-Panel-0c4b33?logo=django)](https://github.com/django-control-room/dj-control-room)
 [![Tests](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/test.yml/badge.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
 [![PyPI version](https://badge.fury.io/py/{{ cookiecutter.project_slug }}.svg)](https://badge.fury.io/py/{{ cookiecutter.project_slug }})
@@ -12,10 +12,10 @@
 
 {{ cookiecutter.project_description }}
 
-**Compatible with [dj-control-room](https://github.com/yassi/dj-control-room).** Register this panel in the Control Room to manage it from a centralized dashboard.
+**Compatible with [dj-control-room](https://github.com/django-control-room/dj-control-room).** Register this panel in the Control Room to manage it from a centralized dashboard.
 
 - **Official site:** [djangocontrolroom.com](https://djangocontrolroom.com)
-- **Project repo:** [dj-control-room](https://github.com/yassi/dj-control-room)
+- **Project repo:** [dj-control-room](https://github.com/django-control-room/dj-control-room)
 
 ## Docs
 
@@ -132,7 +132,7 @@ python manage.py createsuperuser  # If you don't have an admin user
 
 ## DJ Control Room Integration
 
-This panel is designed to work seamlessly with [DJ Control Room](https://github.com/yassi/dj-control-room), a centralized dashboard for managing Django admin panels.
+This panel is designed to work seamlessly with [DJ Control Room](https://github.com/django-control-room/dj-control-room), a centralized dashboard for managing Django admin panels.
 
 ### Integration
 
