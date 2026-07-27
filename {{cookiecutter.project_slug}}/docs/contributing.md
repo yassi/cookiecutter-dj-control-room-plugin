@@ -1,4 +1,4 @@
-# Development
+# Contributing
 
 Contributing to {{ cookiecutter.project_name }} or setting up for local development.
 
@@ -121,7 +121,7 @@ make docker_down    # Stop Docker services
 make docker_shell   # Open shell in container
 ```
 
-## Contributing
+## Submitting Changes
 
 1. Fork the repository
 2. Create a feature branch

@@ -2,6 +2,8 @@
 
 {{ cookiecutter.project_name }} currently works out of the box with minimal configuration.
 
+For access control specifically (locking down individual views or MCP tools by group), see [Scopes](scopes.md).
+
 ## Basic Setup
 
 The only required configuration is adding the app to your `INSTALLED_APPS` and including the URLs in your URL configuration.
@@ -52,17 +54,17 @@ You can customize panel styling with `{{ cookiecutter.package_name|upper }}_SETT
 }
 ```
 
-## Panel Tools
+## Panel Tools (MCP)
 
-{{ cookiecutter.project_name }} ships with `{{ cookiecutter.package_name }}/tools.py`, a `ToolRegistry` of MCP-facing tools that the dj-control-room hub can aggregate and expose to an AI agent. A `get_resolved_settings` tool is included by default.
+{{ cookiecutter.project_name }} ships with `{{ cookiecutter.package_name }}/tools.py`, a `ToolRegistry` of MCP-facing tools that the dj-control-room hub can aggregate and expose to an AI agent (Cursor, Claude, etc.). A `hello_world` tool is included by default, under the `agent_hello_world` scope.
 
-Add your own by decorating a handler with `@registry.register(...)` in `tools.py`:
+Add your own by decorating a handler with `@registry.register(...)` in `tools.py`. Give each tool its own scope, prefixed with `agent_`, so agent access can be governed independently of the view scopes humans hit in the admin UI:
 
 ```python
 # {{ cookiecutter.package_name }}/tools.py
 @registry.register(
     name="get_item",
-    scope="read",
+    scope="agent_get_item",
     description="Fetch a single item by key.",
     input_schema={
         "type": "object",
@@ -75,6 +77,20 @@ def handle_get_item(ctx: PanelToolContext) -> PanelToolResult:
 ```
 
 Tools are picked up automatically via `conf.py`'s `tools=tool_registry.tools`. See the [dj-control-room-base panel tools guide](https://django-control-room.github.io/dj-control-room-base/building-panels/#panel-tools) for the full API.
+
+### `SCOPE_PERMISSIONS`
+
+**Type:** `dict`  
+**Default:** `{}`  
+**Description:** Restrict individual view or tool scopes independently of the panel's default `ALLOWED_GROUPS`/`REQUIRE_SUPERUSER`. See [Scopes](scopes.md) for the full list of scopes this panel defines and a worked example.
+
+```python
+{{ cookiecutter.package_name|upper }}_SETTINGS = {
+    'SCOPE_PERMISSIONS': {
+        'agent_hello_world': {'ALLOWED_GROUPS': ['ai-agents']},
+    },
+}
+```
 
 ## Advanced Configuration
 

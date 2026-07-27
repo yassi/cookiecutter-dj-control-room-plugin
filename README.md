@@ -128,7 +128,8 @@ your-project/
 │   ├── index.md
 │   ├── installation.md
 │   ├── configuration.md
-│   └── development.md
+│   ├── scopes.md
+│   └── contributing.md
 ├── images/                    # Screenshots for README
 ├── pyproject.toml            # Python package configuration
 ├── setup.py                  # Setuptools entry point

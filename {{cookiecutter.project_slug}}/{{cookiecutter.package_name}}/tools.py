@@ -11,6 +11,12 @@ Use local imports inside handlers for anything that touches Django models -
 this keeps this module safe to import at any point in the Django startup
 sequence.
 
+Give each tool its own scope, prefixed with `agent_` to keep it distinct
+from the view scopes used by `@panel_config.permission_required(...)` in
+views.py. This lets you grant staff full access to the admin UI while
+independently restricting (or denying) AI agent access to the same data
+via `SCOPE_PERMISSIONS`. See docs/scopes.md.
+
 See: https://django-control-room.github.io/dj-control-room-base/building-panels/#panel-tools
 """
 
@@ -25,7 +31,7 @@ registry = ToolRegistry()
 
 @registry.register(
     name="hello_world",
-    scope="hello",
+    scope="agent_hello_world",
     description=("Returns a simple 'Hello, World!' message."),
     input_schema={
         "type": "object",
