@@ -12,7 +12,7 @@
 
 {{ cookiecutter.project_description }}
 
-**Compatible with [dj-control-room](https://github.com/django-control-room/dj-control-room).** Register this panel in the Control Room to manage it from a centralized dashboard.
+**Compatible with [dj-control-room](https://django-control-room.github.io/dj-control-room/).** Register this panel in the Control Room to manage it from a centralized dashboard.
 
 - **Official site:** [djangocontrolroom.com](https://djangocontrolroom.com)
 - **Project repo:** [dj-control-room](https://github.com/django-control-room/dj-control-room)
@@ -24,22 +24,9 @@
 ## Features
 
 - **TBD**: Add your main features here
-- **AI Agent Integration (MCP)**: exposes tools defined in `tools.py` (a `hello_world` example ships by default) so AI agents can interact with your panel via [dj-control-room](https://github.com/django-control-room/dj-control-room)'s MCP server
+- **AI Agent Integration (MCP)**: exposes tools defined in `tools.py` (a `hello_world` example ships by default) so AI agents can interact with your panel via [dj-control-room](https://django-control-room.github.io/dj-control-room/)'s MCP server
 
 
-### Project Structure
-
-```
-{{ cookiecutter.project_slug }}/
-├── {{ cookiecutter.package_name }}/         # Main package
-│   ├── templates/           # Django templates
-│   ├── views.py             # Django views
-│   └── urls.py              # URL patterns
-├── example_project/         # Example Django project
-├── tests/                   # Test suite
-├── images/                  # Screenshots for README
-└── requirements.txt         # Development dependencies
-```
 
 ## Requirements
 
@@ -70,14 +57,17 @@ Add it to `INSTALLED_APPS`, include its URLs, and migrate:
 ```python
 INSTALLED_APPS = [
     # ...
-    '{{ cookiecutter.package_name }}',
+    "{{ cookiecutter.package_name }}",
 ]
 ```
 
 ```python
 urlpatterns = [
-    path('admin/{{ cookiecutter.project_slug }}/', include('{{ cookiecutter.package_name }}.urls')),
-    path('admin/', admin.site.urls),
+    path(
+        "admin/{{ cookiecutter.project_slug }}/",
+        include("{{ cookiecutter.package_name }}.urls"),
+    ),
+    path("admin/", admin.site.urls),
 ]
 ```
 
@@ -92,7 +82,7 @@ For the full walkthrough and settings reference, see the [Installation](https://
 
 ## DJ Control Room Integration
 
-This panel is designed to work seamlessly with [DJ Control Room](https://github.com/django-control-room/dj-control-room), a centralized dashboard for managing Django admin panels.
+This panel is designed to work seamlessly with [DJ Control Room](https://django-control-room.github.io/dj-control-room/), a centralized dashboard for managing Django admin panels.
 
 ### Integration
 
@@ -102,17 +92,17 @@ register your panel in django's installed apps
    ```python
    INSTALLED_APPS = [
        # ... other apps
-       'dj_control_room',
-       '{{ cookiecutter.package_name }}',
+       "dj_control_room",
+       "{{ cookiecutter.package_name }}",
    ]
    ```
 
 2. Include the Control Room URLs in your `urls.py`:
    ```python
    urlpatterns = [
-       path('', include('{{ cookiecutter.package_name }}.urls')),  # Panel URLs
-       path('admin/dj-control-room/', include('dj_control_room.urls')),  # Control Room
-       path('admin/', admin.site.urls),
+       path("", include("{{ cookiecutter.package_name }}.urls")),  # Panel URLs
+       path("admin/dj-control-room/", include("dj_control_room.urls")),  # Control Room
+       path("admin/", admin.site.urls),
    ]
    ```
 
@@ -132,16 +122,16 @@ You can customize these values by editing `{{ cookiecutter.package_name }}/panel
 
 ## MCP Tools (AI Agent Integration)
 
-Ships a `hello_world` example tool that [dj-control-room](https://github.com/django-control-room/dj-control-room)'s MCP server exposes to AI agents (Cursor, Claude, etc.). Add your own in `{{ cookiecutter.package_name }}/tools.py`.
+Ships a `hello_world` example tool that [dj-control-room](https://django-control-room.github.io/dj-control-room/)'s MCP server exposes to AI agents (Cursor, Claude, etc.). Add your own in `{{ cookiecutter.package_name }}/tools.py`.
 
 See [Configuration → Panel Tools (MCP)](https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/configuration/#panel-tools-mcp) for the full reference and [Scopes](https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/scopes/) for how agent access is permissioned separately from the admin UI.
 
-## Development Setup
+## Contributing
 
-Want to contribute or set up the project for local development? See [docs/contributing.md](docs/contributing.md) for prerequisites, Docker/virtualenv setup, running the example project, and the test suite.
+Want to contribute or set up the project for local development? See [Contributing](https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/contributing/) for prerequisites, Docker/virtualenv setup, running the example project, and the test suite.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/blob/main/LICENSE) file for details.

@@ -22,6 +22,7 @@ classifiers = [
     "Framework :: Django :: 5.1",
     "Framework :: Django :: 5.2",
     "Framework :: Django :: 6.0",
+    "Framework :: Django :: 6.1",
     "License :: OSI Approved :: {% if cookiecutter.open_source_license == 'MIT' %}MIT{% elif cookiecutter.open_source_license == 'BSD' %}BSD{% elif cookiecutter.open_source_license == 'Apache-2.0' %}Apache Software{% elif cookiecutter.open_source_license == 'GPL-3.0' %}GNU General Public (GPL){% else %}MIT{% endif %} License",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -36,7 +37,7 @@ classifiers = [
 keywords = ["django", "admin", "panel"]
 dependencies = [
     "Django>=4.2",
-    "dj-control-room-base>=1.3.0",
+    "dj-control-room-base>=1.5.0",
 ]
 
 [project.entry-points."dj_control_room.panels"]

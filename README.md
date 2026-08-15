@@ -7,7 +7,7 @@
 
 A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for generating Django admin panel libraries like `dj-redis-panel`, `dj-cache-panel`, and `dj-celery-panel`.
 
-Libraries generated from this template are **compatible with [dj-control-room](https://github.com/django-control-room/dj-control-room)** and can be registered as panels in its centralized dashboard.
+Libraries generated from this template are **compatible with [dj-control-room](https://django-control-room.github.io/dj-control-room/)** and can be registered as panels in its centralized dashboard.
 
 - **Official site:** [djangocontrolroom.com](https://djangocontrolroom.com)
 - **Project repo:** [dj-control-room](https://github.com/django-control-room/dj-control-room)
@@ -232,9 +232,9 @@ can be used as a starting point for creating any type of django app/library.
 
 ## Examples of Projects Using This Pattern
 
-- [dj-redis-panel](https://github.com/django-control-room/dj-redis-panel) - Redis inspection and management
-- [dj-cache-panel](https://github.com/django-control-room/dj-cache-panel) - Django cache backends inspector
-- [dj-celery-panel](https://github.com/django-control-room/dj-celery-panel) - Celery task monitoring
+- [dj-redis-panel](https://django-control-room.github.io/dj-redis-panel/) - Redis inspection and management
+- [dj-cache-panel](https://django-control-room.github.io/dj-cache-panel/) - Django cache backends inspector
+- [dj-celery-panel](https://django-control-room.github.io/dj-celery-panel/) - Celery task monitoring
 
 ## Template Development
 

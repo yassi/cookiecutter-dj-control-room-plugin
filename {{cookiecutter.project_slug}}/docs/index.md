@@ -13,7 +13,7 @@
 - [Installation](installation.md)
 - [Configuration](configuration.md)
 - [Scopes](scopes.md)
-- [Development](contributing.md)
+- [Contributing](contributing.md)
 
 ## Requirements
 
